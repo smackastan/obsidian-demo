@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar - File Explorer -->
+        <aside class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <div class="vault-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Obsidian Demo</span>
+                </div>
+            </div>
+            <div class="file-explorer">
+                <div class="nav-header">
+                    <span>FILES</span>
+                </div>
+                <div id="file-tree" class="file-tree">
+                    <!-- Files will be populated by JavaScript -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="tab-bar">
+                <div id="tabs" class="tabs">
+                    <!-- Tabs will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="editor-container">
+                <article id="markdown-content" class="markdown-body">
+                    <div class="welcome-message">
+                        <h1>Welcome to Obsidian Demo</h1>
+                        <p>Select a note from the sidebar to begin reading.</p>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Backlinks -->
+        <aside class="sidebar right-sidebar">
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    <span>Backlinks</span>
+                    <span id="backlink-count" class="count">0</span>
+                </div>
+                <div id="backlinks" class="backlinks-list">
+                    <p class="empty-state">No backlinks found</p>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 10 20 15 15 20"></polyline>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                    </svg>
+                    <span>Outgoing links</span>
+                    <span id="outgoing-count" class="count">0</span>
+                </div>
+                <div id="outgoing-links" class="outgoing-list">
+                    <p class="empty-state">No outgoing links</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
